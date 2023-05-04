@@ -143,15 +143,21 @@ def myNetwork():
     h1.cmd("dhclient")
     h2.cmd("dhclient")
     h3.cmd("dhclient")
+    h4.cmd("dhclient")
+    h5.cmd("dhclient")
+    h6.cmd("dhclient")
+    h7.cmd("dhclient")
+    h8.cmd("dhclient")
+    h9.cmd("dhclient")
+    h10.cmd("dhclient")
+    h11.cmd("dhclient")
+    h12.cmd("dhclient")
+    h13.cmd("dhclient")
     r1.cmd("iptables -t nat -A POSTROUTING -o r1-eth0 -j MASQUERADE")
-
-    h1.defaultIntf().updateIP()
-    h2.defaultIntf().updateIP()
-    h3.defaultIntf().updateIP()
+    
     CLI(net)
     net.stop()
 
 if __name__ == '__main__':
     setLogLevel( 'info' )
     myNetwork()
-
